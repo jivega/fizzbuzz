@@ -1,38 +1,24 @@
 package com.jivega.patterns.fizzbuzz;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Assert;
+import org.junit.Test;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+public class AppTest {
+    @Test
+    public void testGetMessage(){
+        int i = 15;
+        int j = 16;
+        int k = 20;
+        int l = 21;
+        String messageBizzBuzz = "BizzBuzz";
+        String messageBizz = "Bizz";
+        String messageBuzz = "Buzz";
+        Assert.assertTrue(messageBizzBuzz.equals(App.getMessage(i)));
+        Assert.assertTrue(messageBizz.equals(App.getMessage(l)));
+        Assert.assertTrue(messageBuzz.equals(App.getMessage(k)));
+        Assert.assertTrue(Integer.valueOf(j).toString().equals(App.getMessage(j)));
     }
 }
