@@ -7,14 +7,21 @@ public class App {
     protected final static String BUZZ = "Buzz";
 
     public static void main(String[] args) {
-        IntStream.range(1,101).forEachOrdered( i-> System.out.println(getMessage(i)));
+        IntStream.range(1, 101).forEachOrdered(i -> System.out.println(getMessage(i)));
     }
-    public static String getMessage( int i ) {
-        String result ;
-        if ( i % 15 == 0 ) { result = FIZZ + BUZZ;}
-        else if ( i % 5 == 0 ) { result = BUZZ;}
-        else if ( i % 3 == 0 ) { result = FIZZ;}
-        else { result = Integer.valueOf(i).toString();}
-        return result;
+
+    public static String getMessage(int i) {
+        String number = Integer.valueOf(i).toString();
+        StringBuilder result = new StringBuilder();
+        if ((i % 3 == 0) || (number.contains("3"))) {
+            result.append(FIZZ);
+        }
+        if ((i % 5 == 0) || (number.contains("5"))) {
+            result.append(BUZZ);
+        }
+        if (result.length() == 0) {
+            result.append(number);
+        }
+        return result.toString();
     }
 }
