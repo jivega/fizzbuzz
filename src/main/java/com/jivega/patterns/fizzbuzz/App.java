@@ -1,10 +1,10 @@
 package com.jivega.patterns.fizzbuzz;
 
+import java.util.stream.IntStream;
+
 public class App {
     public static void main(String[] args) {
-        for( int i = 1 ; i <= 100 ; i++){
-            System.out.println(getMessage(i));
-        }
+        IntStream.range(1,101).forEachOrdered( i-> System.out.println(getMessage(i)));
     }
     public static String getMessage( int i ) {
         String result ;
