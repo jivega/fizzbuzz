@@ -16,17 +16,16 @@ public class AppTest {
         int m = 31;
         int n = 51;
         int o = 53;
-
-        String messageBizzBuzz = "BizzBuzz";
-        String messageBizz = "Bizz";
-        String messageBuzz = "Buzz";
-        Assert.assertTrue(messageBizzBuzz.equals(App.getMessage(i)));
-        Assert.assertTrue(messageBizz.equals(App.getMessage(l)));
-        Assert.assertTrue(messageBuzz.equals(App.getMessage(k)));
+        String messageFizzBuzz = App.FIZZ + App.BUZZ;
+        String messageFizz = App.FIZZ;
+        String messageBuzz = App.BUZZ;
+        Assert.assertTrue(messageFizzBuzz.equals(App.getMessage(i)));
         Assert.assertTrue(Integer.valueOf(j).toString().equals(App.getMessage(j)));
-        Assert.assertTrue(messageBizz.equals(App.getMessage(m)));
-        Assert.assertTrue(messageBizzBuzz.equals(App.getMessage(n)));
-        Assert.assertTrue(messageBizzBuzz.equals(App.getMessage(o)));
+        Assert.assertTrue(messageFizz.equals(App.getMessage(l)));
+        Assert.assertTrue(messageBuzz.equals(App.getMessage(k)));
+        Assert.assertTrue(messageFizz.equals(App.getMessage(m)));
+        Assert.assertTrue(messageFizzBuzz.equals(App.getMessage(n)));
+        Assert.assertTrue(messageFizzBuzz.equals(App.getMessage(o)));
 
     }
 }
