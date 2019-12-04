@@ -13,11 +13,11 @@ public class AppTest {
         int j = 16;
         int k = 20;
         int l = 21;
-        String messageBizzBuzz = "BizzBuzz";
-        String messageBizz = "Bizz";
-        String messageBuzz = "Buzz";
-        Assert.assertTrue(messageBizzBuzz.equals(App.getMessage(i)));
-        Assert.assertTrue(messageBizz.equals(App.getMessage(l)));
+        String messageFizzBuzz = App.FIZZ + App.BUZZ;
+        String messageFizz = App.FIZZ;
+        String messageBuzz = App.BUZZ;
+        Assert.assertTrue(messageFizzBuzz.equals(App.getMessage(i)));
+        Assert.assertTrue(messageFizz.equals(App.getMessage(l)));
         Assert.assertTrue(messageBuzz.equals(App.getMessage(k)));
         Assert.assertTrue(Integer.valueOf(j).toString().equals(App.getMessage(j)));
     }
